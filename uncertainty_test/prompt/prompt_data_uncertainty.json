@@ -1,0 +1,102 @@
+{
+  "(AND people.measured_person (JOIN people.person.employment_history (gt business.employment_tenure.to 1946^^http://www.w3.org/2001/XMLSchema#gYear)))": {
+    "input": "(AND people.measured_person (JOIN people.person.employment_history (gt business.employment_tenure.to 1946^^http://www.w3.org/2001/XMLSchema#gYear)))",
+    "sub1": "(gt business.employment_tenure.to 1946^^http://www.w3.org/2001/XMLSchema#gYear)",
+    "sub2": "(JOIN people.person.employment_history sub1)",
+    "sub3": "(AND people.measured_person sub2)",
+    "sub1-q1": "employment tenure after 1946",
+    "sub2-q2": "person employment tenure history after 1946",
+    "sub3-q3": "beginning after the date 1946 name all of the employees that are considered to have tenure?",
+    "output": "beginning after the date 1946 name all of the employees that are considered to have tenure?"
+  },
+  "(ARGMAX (AND music.composition (JOIN music.composition.form (JOIN music.compositional_form.superforms Suite))) music.composition.date_of_first_performance)": {
+    "input": "(ARGMAX (AND music.composition (JOIN music.composition.form (JOIN music.compositional_form.superforms Suite))) music.composition.date_of_first_performance)",
+    "sub1": "(JOIN music.compositional_form.superforms Suite)",
+    "sub2": "(JOIN music.composition.form sub1)",
+    "sub3": "(AND music.composition sub2)",
+    "sub4": "(ARGMAX sub3 music.composition.date_of_first_performance)",
+    "sub1-q1": "compositional form superforms suite",
+    "sub2-q2": "compositional form of suite",
+    "sub3-q3": "composition of suite",
+    "sub4-q4": "what suite was performed most recently?",
+    "output": "what suite was performed most recently?"
+  },
+  "(AND organization.organization (AND (JOIN (R organization.organization_board_membership.organization) (JOIN (R business.board_member.organization_board_memberships) Martin Hug)) (JOIN organization.organization.organization_type (JOIN (R organization.organization.organization_type) sci))))": {
+    "input": "(AND organization.organization (AND (JOIN (R organization.organization_board_membership.organization) (JOIN (R business.board_member.organization_board_memberships) Martin Hug)) (JOIN organization.organization.organization_type (JOIN (R organization.organization.organization_type) sci))))",
+    "sub1": "(JOIN (R business.board_member.organization_board_memberships) Martin Hug)",
+    "sub2": "(JOIN (R organization.organization_board_membership.organization) sub1)",
+    "sub3": "(JOIN (R organization.organization.organization_type) sci)",
+    "sub4": "(JOIN organization.organization.organization_type sub3)",
+    "sub5": "(AND sub2 ub4)",
+    "sub6": "(AND organization.organization sub5)",
+    "sub1-q1": "organization board_memberships martin hug",
+    "sub2-q2": "organization of board_memberships martin hug",
+    "sub3-q3": "organization type sci",
+    "sub4-q4": "organization type is similar to sci",
+    "sub5-q5": "organization of board_memberships martin hug and type is similar to sci",
+    "sub6-q6": "what organization similar to sci is run by martin hug?",
+    "output": "what organization similar to sci is run by martin hug?"
+  },
+  "(ARGMAX food.culinary_tool (JOIN food.culinary_tool.used_in_recipes (JOIN food.recipe.author people.person.date_of_birth)))": {
+    "input": "(ARGMAX food.culinary_tool (JOIN food.culinary_tool.used_in_recipes (JOIN food.recipe.author people.person.date_of_birth)))",
+    "sub1": "(JOIN food.recipe.author people.person.date_of_birth)",
+    "sub2": "(JOIN food.culinary_tool.used_in_recipes sub1)",
+    "sub3": "(ARGMAX food.culinary_tool sub2)",
+    "sub1-q1": "recipe author person date of birth",
+    "sub2-q2": "date of birth culinary tool used in recipes by recipe author person",
+    "sub3-q3": "the youngest chef uses which kind of cooking gear in their recipes?",
+    "output": "the youngest chef uses which kind of cooking gear in their recipes?"
+  },
+  "(AND amusement_parks.ride_designer (JOIN amusement_parks.ride_designer.rides (JOIN (R amusement_parks.accident.ride) (ge amusement_parks.accident.date 1984-01-03^^http://www.w3.org/2001/XMLSchema#date))))": {
+    "input": "(AND amusement_parks.ride_designer (JOIN amusement_parks.ride_designer.rides (JOIN (R amusement_parks.accident.ride) (ge amusement_parks.accident.date 1984-01-03^^http",
+    "sub1": "(ge amusement_parks.accident.date 1984-01-03^^http://www.w3.org/2001/XMLSchema#date)",
+    "sub2": "(JOIN (R amusement_parks.accident.ride) sub1)",
+    "sub3": "(JOIN amusement_parks.ride_designer.rides sub2)",
+    "sub4": "(AND amusement_parks.ride_designer sub3)",
+    "sub1-q1": "accident date after 1984-01-03",
+    "sub2-q2": "ride accident date after 1984-01-03",
+    "sub3-q3": "ride designer accident date after 1984-01-03",
+    "sub4-q4": "what is the name of the designer which the roller coaster had an accident after jan. the 3rd, 1984?",
+    "output": "what is the name of the designer which the roller coaster had an accident after jan. the 3rd, 1984?"
+  },
+  "(AND comic_books.comic_book_inker (JOIN comic_books.comic_book_inker.comic_books_inked (JOIN (R comic_books.comic_book_genre.stories_in_this_genre) (JOIN (R comic_books.comic_book_series.genre) naruto manga))))": {
+    "input": "(AND comic_books.comic_book_inker (JOIN comic_books.comic_book_inker.comic_books_inked (JOIN (R comic_books.comic_book_genre.stories_in_this_genre) (JOIN (R comic_books.comic_book_series.genre) naruto manga))))",
+    "sub1": "(JOIN (R comic_books.comic_book_series.genre) naruto manga)",
+    "sub2": "(JOIN (R comic_books.comic_book_genre.stories_in_this_genre) sub1)",
+    "sub3": "(JOIN comic_books.comic_book_inker.comic_books_inked sub2)",
+    "sub4": "(AND comic_books.comic_book_inker sub3)",
+    "sub1-q1": "comic book series genre naruto manga",
+    "sub2-q2": "comic book series in the same genre as naruto manga",
+    "sub3-q3": "comic books series inked in the same genre as naruto manga",
+    "sub4-q4": "find artists that ink comics in the same genre as naruto manga.",
+    "output": "find artists that ink comics in the same genre as naruto manga."
+  },
+  "(ARGMAX (AND amusement_parks.ride_designer (JOIN (R amusement_parks.ride.designer) (JOIN (R amusement_parks.ride_theme.rides) g.11bc1f9bb1))) (JOIN (R amusement_parks.ride.designer) amusement_parks.ride.max_speed))": {
+    "input": "(ARGMAX (AND amusement_parks.ride_designer (JOIN (R amusement_parks.ride.designer) (JOIN (R amusement_parks.ride_theme.rides) g.11bc1f9bb1))) (JOIN (R amusement_parks.ride.designer) amusement_parks.ride.max_speed))",
+    "sub1": "(JOIN (R amusement_parks.ride_theme.rides) g.11bc1f9bb1)",
+    "sub2": "(JOIN (R amusement_parks.ride.designer) sub1)",
+    "sub3": "(AND amusement_parks.ride_designer sub2)",
+    "sub4": "(JOIN (R amusement_parks.ride.designer) amusement_parks.ride.max_speed)",
+    "sub5": "(ARGMAX sub3 sub4)",
+    "sub1-q1": "ride theme g.11bc1f9bb1",
+    "sub2-q2": "ride theme designer g.11bc1f9bb1",
+    "sub3-q3": "amusement parks ride designer g.11bc1f9bb1",
+    "sub4-q4": "ride designer max speed",
+    "sub5-q5": "who is the designer of the fastest amusement park ride as well as the high striker ride?",
+    "output": "who is the designer of the fastest amusement park ride as well as the high striker ride?"
+  },
+  "(AND theater.theater (AND (JOIN theater.theater.theatrical_productions_staged_here (JOIN theater.theater_production.producer Scott Prisand)) (ge architecture.venue.capacity 1917^^http://www.w3.org/2001/XMLSchema#integer)))": {
+    "input": "(AND theater.theater (AND (JOIN theater.theater.theatrical_productions_staged_here (JOIN theater.theater_production.producer Scott Prisand)) (ge architecture.venue.capacity 1917^^http://www.w3.org/2001/XMLSchema#integer)))",
+    "sub1": "(JOIN theater.theater_production.producer Scott Prisand)",
+    "sub2": "(JOIN theater.theater.theatrical_productions_staged_here sub1)",
+    "sub3": "(ge architecture.venue.capacity 1917^^http://www.w3.org/2001/XMLSchema#integer)",
+    "sub4": "(AND sub2 sub3)",
+    "sub5": "(AND theater.theater sub4)",
+    "sub1-q1": "theater production producer scott prisand",
+    "sub2-q2": "theatrical productions staged producer scott prisand",
+    "sub3-q3": "venue capacity more than 1917",
+    "sub4-q4": "theatrical productions staged producer scott prisand venue capacity more than 1917",
+    "sub5-q5": "in which theatre with more than 1917 seats was scott prisand's production staged?",
+    "output": "in which theatre with more than 1917 seats was scott prisand's production staged?"
+  }
+}

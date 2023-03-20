@@ -1,0 +1,80 @@
+{
+   "(AND film.film_set_designer (lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))": {
+    "input": "(AND film.film_set_designer (lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "sub1": "(lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "sub2": "(AND film.film_set_designer sub1)",
+    "sub1-q1": "person weight kg less than 75.0",
+    "sub2-q2": "who is a film set designer and weight less than 75.0?",
+    "output": "who is a film set designer and weight less than 75.0?"
+  },
+  "(AND spaceflight.rocket_fuel (JOIN (R spaceflight.rocket_stage.fuel) (le spaceflight.rocket_stage.burn_time 360.0^^http://www.w3.org/2001/XMLSchema#float)))": {
+    "input": "(AND spaceflight.rocket_fuel (JOIN (R spaceflight.rocket_stage.fuel) (le spaceflight.rocket_stage.burn_time 360.0^^http://www.w3.org/2001/XMLSchema#float)))",
+    "sub1": "(le spaceflight.rocket_stage.burn_time 360.0^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub2": "(JOIN (R spaceflight.rocket_stage.fuel) sub1)",
+    "sub3": "(AND spaceflight.rocket_fuel sub2)",
+    "sub1-q1": "rocket stage with burn time no more than 360.0",
+    "sub2-q2": "rocket stage fuel that has the rocket stage with burn time no more than 360.0",
+    "sub3-q3": "what is the name of the rocket fuel that has the rocket stage with burn time no more than 360.0?",
+    "output": "what is the name of the rocket fuel that has the rocket stage with burn time no more than 360.0?"
+  },
+  "(ARGMAX (AND food.recipe (JOIN (R food.culinary_tool.used_in_recipes) Parchment paper)) food.recipe.preparation_time)": {
+    "input": "(ARGMAX (AND food.recipe (JOIN (R food.culinary_tool.used_in_recipes) Parchment paper)) food.recipe.preparation_time)",
+    "sub1": "(JOIN (R food.culinary_tool.used_in_recipes) Parchment paper)",
+    "sub2": "(AND food.recipe sub1)",
+    "sub3": "(ARGMAX sub2 food.recipe.preparation_time)",
+    "sub1-q1": "culinary tool recipe uses parchment paper",
+    "sub2-q2": "the recipe that uses parchment paper",
+    "sub3-q3": "what recipe has the the largest preparation time that uses parchment paper?",
+    "output": "what recipe has the the largest preparation time that uses parchment paper?"
+  },
+  "(AND sports.sports_equipment (JOIN (R sports.sport.related_equipment) (JOIN (R sports.multi_event_tournament.sports) 2014 Citi Open)))": {
+    "input": "(AND sports.sports_equipment (JOIN (R sports.sport.related_equipment) (JOIN (R sports.multi_event_tournament.sports) 2014 Citi Open)))",
+    "sub1": "(JOIN (R sports.multi_event_tournament.sports) 2014 Citi Open)",
+    "sub2": "(JOIN (R sports.sport.related_equipment) sub1)",
+    "sub3": "(AND sports.sports_equipment sub2)",
+    "sub1-q1": "multi event tournament sports in 2014 citi open",
+    "sub2-q2": "sport related equipment of multi event tournament sports in 2014 citi open",
+    "sub3-q3": "which sports equipment is a related equipment of a sport in 2014 citi open?",
+    "output": "which sports equipment is a related equipment of a sport in 2014 citi open?"
+  },
+  "(COUNT (AND biology.gene_ontology_group (JOIN (R biology.gene_ontology_group.narrower_group) intraspecies interaction between organisms)))": {
+    "input": "(COUNT (AND biology.gene_ontology_group (JOIN (R biology.gene_ontology_group.narrower_group) intraspecies interaction between organisms)))",
+    "sub1": "(JOIN (R biology.gene_ontology_group.narrower_group) intraspecies interaction between organisms)",
+    "sub2": "(AND biology.gene_ontology_group sub1)",
+    "sub3": "(COUNT sub2)",
+    "sub1-q1": "gene ontology group narrower group in intraspecies interaction between organisms",
+    "sub2-q2": "gene ontology group in intraspecies interaction between organisms?",
+    "sub3-q3": "how many groups of gene ontologies are included in intraspecies interaction between organisms?",
+    "output": "how many groups of gene ontologies are included in intraspecies interaction between organisms?"
+  },
+  "(ARGMIN amusement_parks.disney_ride (JOIN (R amusement_parks.ride_type.rides) (JOIN (R amusement_parks.ride.ride_type) amusement_parks.ride.inversions)))": {
+    "input": "(ARGMIN amusement_parks.disney_ride (JOIN (R amusement_parks.ride_type.rides) (JOIN (R amusement_parks.ride.ride_type) amusement_parks.ride.inversions)))",
+    "sub1": "(JOIN (R amusement_parks.ride.ride_type) amusement_parks.ride.inversions)",
+    "sub2": "(JOIN (R amusement_parks.ride_type.rides) sub1)",
+    "sub3": "(ARGMIN amusement_parks.disney_ride sub2)",
+    "sub1-q1": "type of ride inversions",
+    "sub2-q2": "rides that ride type is the same with inversions",
+    "sub3-q3": "what disney rides have the fewest number of inversions?",
+    "output": "what disney rides have the fewest number of inversions?"
+  },
+  "(AND spaceflight.rocket_engine_cycle (JOIN (R spaceflight.bipropellant_rocket_engine.engine_cycle) (ge spaceflight.rocket_engine.thrust_sea_level 2.9e+06^^http://www.w3.org/2001/XMLSchema#float)))": {
+    "input": "(AND spaceflight.rocket_engine_cycle (JOIN (R spaceflight.bipropellant_rocket_engine.engine_cycle) (ge spaceflight.rocket_engine.thrust_sea_level 2.9e+06^^http://www.w3.org/2001/XMLSchema#float)))",
+    "sub1": "(ge spaceflight.rocket_engine.thrust_sea_level 2.9e+06^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub2": "(JOIN (R spaceflight.bipropellant_rocket_engine.engine_cycle) sub1)",
+    "sub3": "(AND spaceflight.rocket_engine_cycle sub2)",
+    "sub1-q1": "rocket engine thrust sea evel no less than 2.9e+06",
+    "sub2-q2": "engine cycle of bipropellant rocket engine with rocket engine thrust sea evel no less than 2.9e+06",
+    "sub3-q3": "what's the cycle of bipropellant rocket engines with rocket engine thrust sea evel no less than 2.9e+06?",
+    "output": "what's the cycle of bipropellant rocket engines with rocket engine thrust sea evel no less than 2.9e+06?"
+  },
+  "(AND tv.tv_network (JOIN tv.tv_network.channels (lt broadcast.tv_channel.from 2001-06-24^^http://www.w3.org/2001/XMLSchema#date)))": {
+    "input": "(AND tv.tv_network (JOIN tv.tv_network.channels (lt broadcast.tv_channel.from 2001-06-24^^http://www.w3.org/2001/XMLSchema#date)))",
+    "sub1": "(lt broadcast.tv_channel.from 2001-06-24^^http://www.w3.org/2001/XMLSchema#date)",
+    "sub2": "(JOIN tv.tv_network.channels sub1)",
+    "sub3": "(AND tv.tv_network sub2)",
+    "sub1-q1": "tv channel from before 2001-06-24",
+    "sub2-q2": "tv network channels started before 2001-06-24",
+    "sub3-q3": "the channel which started before 2001-06-24 is on which network?",
+    "output": "the channel which started before 2001-06-24 is on which network?"
+  }
+}

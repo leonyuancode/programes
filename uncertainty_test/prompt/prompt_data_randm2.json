@@ -1,0 +1,70 @@
+{
+  "(AND music.producer (AND (JOIN (R music.release.producers) superman/clark kent) (JOIN music.producer.tracks_produced Lowood)))": {
+    "input": "(AND music.producer (AND (JOIN (R music.release.producers) superman/clark kent) (JOIN music.producer.tracks_produced Lowood)))",
+    "sub1": "(JOIN (R music.release.producers) superman/clark kent)",
+    "sub2": "(JOIN music.producer.tracks_produced Lowood)",
+    "sub3": "(AND sub1 sub2)",
+    "sub4": "(AND music.producer sub3)",
+    "sub1-q1": "release producers superman/clark kent",
+    "sub2-q2": "producer tracks produced lowood",
+    "sub3-q3": "release producers tracks produced superman/clark kent and lowood",
+    "sub4-q4": "who produced superman/clark kent and lowood?",
+    "output": "who produced superman/clark kent and lowood?"
+  },
+  "(AND food.type_of_dish (JOIN food.type_of_dish.dishes Crappit heid))": {
+    "input": "(AND food.type_of_dish (JOIN food.type_of_dish.dishes Crappit heid))",
+    "sub1": "(JOIN food.type_of_dish.dishes Crappit heid)",
+    "sub2": "(AND food.type_of_dish sub1)",
+    "sub1-q1": "type of dish crappit heid",
+    "sub2-q2": "crappit heid is which type of dish?",
+    "output": "crappit heid is which type of dish?"
+  },
+  "(AND olympics.olympic_games (gt olympics.olympic_games.number_of_events 172^^http://www.w3.org/2001/XMLSchema#integer))": {
+    "input": "(AND olympics.olympic_games (gt olympics.olympic_games.number_of_events 172^^http://www.w3.org/2001/XMLSchema#integer))",
+    "sub1": "(gt olympics.olympic_games.number_of_events 172^^http://www.w3.org/2001/XMLSchema#integer)",
+    "sub2": "(AND olympics.olympic_games sub1)",
+    "sub1-q1": "olympic games number of events more than 172",
+    "sub2-q2": "what olympic games has more than 172 number of events?",
+    "output": "what olympic games has more than 172 number of events?"
+  },
+  "(AND computer.computer (JOIN computer.computer.parent_model Dell Precision T3600 workstation))": {
+    "input": "(AND computer.computer (JOIN computer.computer.parent_model Dell Precision T3600 workstation))",
+    "sub1": "(JOIN computer.computer.parent_model Dell Precision T3600 workstation)",
+    "sub2": "(AND computer.computer sub1)",
+    "sub1-q1": "computer parent model the dell precision t3600 workstation",
+    "sub2-q2": "the dell precision t3600 workstation computer has what parent model?",
+    "output": "the dell precision t3600 workstation computer has what parent model?"
+  },
+  "(AND music.album (JOIN music.album.releases Losers, Kings, and Things We Don't Understand))": {
+    "input": "(AND music.album (JOIN music.album.releases Losers, Kings, and Things We Don't Understand))",
+    "sub1": "(JOIN music.album.releases Losers, Kings, and Things We Don't Understand)",
+    "sub2": "(AND music.album sub1)",
+    "sub1-q1": "album releases losers, kings, and things we don't understand",
+    "sub2-q2": "losers, kings, and things we don't understand has released which albums?",
+    "output": "losers, kings, and things we don't understand has released which albums?"
+  },
+  "(AND law.invention (JOIN law.invention.patents Methods of screening for B cell activity modulators: U.S. Patent No. 6,913,882))": {
+    "input": "(AND law.invention (JOIN law.invention.patents Methods of screening for B cell activity modulators: U.S. Patent No. 6,913,882))",
+    "sub1": "(JOIN law.invention.patents Methods of screening for B cell activity modulators: U.S. Patent No. 6,913,882)",
+    "sub2": "(AND law.invention sub1)",
+    "sub1-q1": "invention patents methods of screening for b cell activity modulators: u.s. patent no. 6,913,882",
+    "sub2-q2": "methods of screening for b cell activity modulators: u.s. patent no. 6,913,882 is the patent for what invention?",
+    "output": "methods of screening for b cell activity modulators: u.s. patent no. 6,913,882 is the patent for what invention?"
+  },
+  "(AND medicine.medical_trial (JOIN medicine.medical_trial.minimum_age_for_eligibility 25^^http://www.w3.org/2001/XMLSchema#integer))": {
+    "input": "(AND medicine.medical_trial (JOIN medicine.medical_trial.minimum_age_for_eligibility 25^^http://www.w3.org/2001/XMLSchema#integer))",
+    "sub1": "(JOIN medicine.medical_trial.minimum_age_for_eligibility 25^^http://www.w3.org/2001/XMLSchema#integer)",
+    "sub2": "(AND medicine.medical_trial sub1)",
+    "sub1-q1": "medical trial minimum age for eligibility of 25",
+    "sub2-q2": "which medical trials requires minimum age of 25?",
+    "output": "which medical trials requires minimum age of 25?"
+  },
+  "(AND internet.api (JOIN internet.api.site Sevanova | BtoB Agency))": {
+    "input": "(AND internet.api (JOIN internet.api.site Sevanova | BtoB Agency))",
+    "sub1": "(JOIN internet.api.site Sevanova | BtoB Agency)",
+    "sub2": "(AND internet.api sub1)",
+    "sub1-q1": "api site sevanova | btob agency",
+    "sub2-q2": "sevanova | btob agency has an api of what?",
+    "output": "sevanova | btob agency has an api of what?"
+  }
+}

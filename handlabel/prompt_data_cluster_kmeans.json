@@ -1,0 +1,86 @@
+{
+  "(AND film.film_set_designer (lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))": {
+    "input": "(AND film.film_set_designer (lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "sub1": "(lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "sub2": "(AND film.film_set_designer sub1)",
+    "sub1-q1": "person weight kg less than 75.0",
+    "sub2-q2": "who weight less than 75.0 and is a film set decorator?",
+    "output": "who weight less than 75.0 and is a film set decorator?"
+  },
+  "(ARGMIN fictional_universe.character_gender (JOIN (R fictional_universe.fictional_character.gender) fictional_universe.fictional_character.weight))": {
+    "input": "(ARGMIN fictional_universe.character_gender (JOIN (R fictional_universe.fictional_character.gender) fictional_universe.fictional_character.weight))",
+    "sub1": "(JOIN (R fictional_universe.fictional_character.gender) fictional_universe.fictional_character.weight)",
+    "sub2": "(ARGMIN fictional_universe.character_gender sub1)",
+    "sub1-q1": "fictional character weight and gender",
+    "sub2-q2": "which gender is the fictional character who weighs the least?",
+    "output": "which gender is the fictional character who weighs the least?"
+  },
+  "(COUNT (AND language.language_dialect (JOIN (R language.human_language.dialects) Rohingya Language)))": {
+    "input": "(COUNT (AND language.language_dialect (JOIN (R language.human_language.dialects) Rohingya Language)))",
+    "sub1": "(JOIN (R language.human_language.dialects) Rohingya Language)",
+    "sub2": "(AND language.language_dialect sub1)",
+    "sub3": "(COUNT sub2)",
+    "sub1-q1": "rohingya language human dialects",
+    "sub2-q2": "language dialects of human language dialects rohingya language ",
+    "sub3-q3": "how many different dialects does rohingya language has?",
+    "output": "how many different dialects does rohingya language has?"
+  },
+  "(ARGMAX (AND spaceflight.bipropellant_rocket_engine (JOIN (R spaceflight.rocket_engine_fuel.rocket_engines) AG-25)) spaceflight.bipropellant_rocket_engine.chamber_pressure)": {
+    "input": "(ARGMAX (AND spaceflight.bipropellant_rocket_engine (JOIN (R spaceflight.rocket_engine_fuel.rocket_engines) AG-25)) spaceflight.bipropellant_rocket_engine.chamber_pressure)",
+    "sub1": "(JOIN (R spaceflight.rocket_engine_fuel.rocket_engines) AG-25)",
+    "sub2": "(AND spaceflight.bipropellant_rocket_engine sub1)",
+    "sub3": "(ARGMAX sub2 spaceflight.bipropellant_rocket_engine.chamber_pressure)",
+    "sub1-q1": "ag-25 rocket engine fuel ",
+    "sub2-q2": "ag-25 is the fuel bipropellant rocket engine",
+    "sub3-q3": "ag-25 is the fuel of which bipropellant rocket engine that has the largest chamber pressure?",
+    "output": "ag-25 is the fuel of which bipropellant rocket engine that has the largest chamber pressure?"
+  },
+  "(AND computer.programming_language_designer (AND (JOIN computer.programming_language_designer.languages_designed Visual Basic .NET) (JOIN computer.programming_language_designer.languages_designed J#)))": {
+    "input": "(AND computer.programming_language_designer (AND (JOIN computer.programming_language_designer.languages_designed Visual Basic .NET) (JOIN computer.programming_language_designer.languages_designed J#)))",
+    "sub1": "(JOIN computer.programming_language_designer.languages_designed Visual Basic .NET)",
+    "sub2": "(AND  sub1 (JOIN computer.programming_language_designer.languages_designed J#))",
+    "sub3": "(AND computer.programming_language_designer sub2)",
+    "sub1-q1": "programming language designer designed visual basic .net",
+    "sub2-q2": "programming language designer designed visual j#",
+    "sub3-q3": "who designed both programming language visual basic .net and j#?",
+    "output": "who designed both programming language visual basic .net and j#?"
+  },
+  "(AND aviation.airport_runway_surface (JOIN aviation.airport_runway_surface.runways (AND (ge aviation.airport_runway.width 61.0^^http://www.w3.org/2001/XMLSchema#float) (JOIN aviation.airport_runway.airport sfo))))": {
+    "input": "(AND aviation.airport_runway_surface (JOIN aviation.airport_runway_surface.runways (AND (ge aviation.airport_runway.width 61.0^^http://www.w3.org/2001/XMLSchema#float) (JOIN aviation.airport_runway.airport sfo))))",
+    "sub1": "(ge aviation.airport_runway.width 61.0^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub2": "(AND sub1 (JOIN aviation.airport_runway.airport sfo))",
+    "sub3": "(JOIN aviation.airport_runway_surface.runways sub2)",
+    "sub4": "(AND aviation.airport_runway_surface sub3)",
+    "sub1-q1": "airport runway with the width less than or equal to 61.0",
+    "sub2-q2": "sfo airport runway with the width less than or equal to 61.0",
+    "sub3-q3": "sfo airport surface on the runway with the width less than or equal to 61.0",
+    "sub4-q4": "sfo uses what type of surface on the runway with the width less than or equal to 61.0?",
+    "output": "sfo uses what type of surface on the runway with the width less than or equal to 61.0?"
+  },
+  "(AND tv.the_colbert_report_episode (AND (JOIN (R tv.tv_director.episodes_directed) Jim Hoskinson) (gt tv.tv_series_episode.air_date 2005-12-08^^http://www.w3.org/2001/XMLSchema#date)))": {
+    "input": "(AND tv.the_colbert_report_episode (AND (JOIN (R tv.tv_director.episodes_directed) Jim Hoskinson) (gt tv.tv_series_episode.air_date 2005-12-08^^http://www.w3.org/2001/XMLSchema#date)))",
+    "sub1": "(JOIN (R tv.tv_director.episodes_directed) Jim Hoskinson)",
+    "sub2": "(gt tv.tv_series_episode.air_date 2005-12-08^^http://www.w3.org/2001/XMLSchema#date)",
+    "sub3": "(AND sub1 sub2)",
+    "sub4": "(AND tv.the_colbert_report_episode sub3)",
+    "sub1-q1": "episodes directed by jim hoskinson",
+    "sub2-q2": "tv series episode aired date after 2005-12-08",
+    "sub3-q3": "colbert report episodes directed by jim hoskinson were aired after 2005-12-08",
+    "sub4-q4": "which the colbert report episodes directed by jim hoskinson were aired after 2005-12-08?",
+    "output": "which the colbert report episodes directed by jim hoskinson were aired after 2005-12-08?"
+  },
+  "(AND aviation.aircraft (AND (JOIN (R aviation.aircraft_model.aircraft) (JOIN aviation.aircraft_model.aircraft_type (JOIN aviation.aircraft_type.aircraft_of_this_type fighting falcon))) (le aviation.aircraft.first_flight 1969-09-13^^http://www.w3.org/2001/XMLSchema#date)))": {
+    "input": "(AND aviation.aircraft (AND (JOIN (R aviation.aircraft_model.aircraft) (JOIN aviation.aircraft_model.aircraft_type (JOIN aviation.aircraft_type.aircraft_of_this_type fighting falcon))) (le aviation.aircraft.first_flight 1969-09-13^^http://www.w3.org/2001/XMLSchema#date)))",
+    "sub1": "(JOIN aviation.aircraft_type.aircraft_of_this_type fighting falcon)",
+    "sub2": "(JOIN aviation.aircraft_model.aircraft_type sub1)",
+    "sub3": "(JOIN (R aviation.aircraft_model.aircraft) sub2)",
+    "sub4": "(AND  sub3 (le aviation.aircraft.first_flight 1969-09-13^^http://www.w3.org/2001/XMLSchema#date))",
+    "sub5": "(AND aviation.aircraft sub4)))",
+    "sub1-q1": "aircraft type fighting falcon",
+    "sub2-q2": "aircraft model type of fighting falcon",
+    "sub3-q3": "aircraft which is the same type as fighting falcon",
+    "sub4-q4": "aircraft first flew before 1969-09-13 and is the same type as fighting falcon",
+    "sub5-q5": "what aircraft first flew before 1969-09-13 and is the same type as fighting falcon?",
+    "output": "what aircraft first flew before 1969-09-13 and is the same type as fighting falcon?"
+  }
+}

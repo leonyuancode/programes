@@ -1,0 +1,72 @@
+{
+  "(AND sports.sport (JOIN sports.sport.team_coaches John Russo))": {
+    "input": "(AND sports.sport (JOIN sports.sport.team_coaches John Russo))",
+    "sub1": "(JOIN sports.sport.team_coaches John Russo)",
+    "sub2": "(AND sports.sport sub1)",
+    "sub1-q1": "sport team coaches john russo",
+    "sub2-q2": "which sport does john russo coach?",
+    "output": "which sport does john russo coach?"
+  },
+  "(AND comic_books.comic_book_creator (JOIN comic_books.comic_book_creator.series_created Tales from the Heart))": {
+    "input": "(AND comic_books.comic_book_creator (JOIN comic_books.comic_book_creator.series_created Tales from the Heart))",
+    "sub1": "(JOIN comic_books.comic_book_creator.series_created Tales from the Heart)",
+    "sub2": "(AND comic_books.comic_book_creator sub1)",
+    "sub1-q1": "comic book series created  tales from the heart",
+    "sub2-q2": "who created the comic tales from the heart?",
+    "output": "who created the comic tales from the heart?"
+  },
+  "(AND medicine.manufactured_drug_form (JOIN medicine.manufactured_drug_form.patents US Patent 5840754))": {
+    "input": "(AND medicine.manufactured_drug_form (JOIN medicine.manufactured_drug_form.patents US Patent 5840754))",
+    "sub1": "(JOIN medicine.manufactured_drug_form.patents US Patent 5840754)",
+    "sub2": "(AND medicine.manufactured_drug_form sub1)",
+    "sub1-q1": "patents of manufactured drug form us patent 5840754",
+    "sub2-q2": "us patent 5840754 is manufactured into what drug form?",
+    "output": "us patent 5840754 is manufactured into what drug form?"
+  },
+  "(AND broadcast.distributor (JOIN broadcast.distributor.distributes WPEC))": {
+    "input": "(AND broadcast.distributor (JOIN broadcast.distributor.distributes WPEC))",
+    "sub1": "(JOIN broadcast.distributor.distributes WPEC)",
+    "sub2": "(AND broadcast.distributor sub1)",
+    "sub1-q1": "broadcast distribution of wpec",
+    "sub2-q2": "what type of distribution does wpec use?",
+    "output": "what type of distribution does wpec use?"
+  },
+  "(AND wine.wine (JOIN wine.wine.wine_type liqueur wine))": {
+    "input": "(AND wine.wine (JOIN wine.wine.wine_type liqueur wine))",
+    "sub1": "(JOIN wine.wine.wine_type liqueur wine)",
+    "sub2": "(AND wine.wine sub1)",
+    "sub1-q1": "wine type is liqueur wine",
+    "sub2-q2": "which wine has the type of liqueur wine?",
+    "output": "which wine has the type of liqueur wine?"
+  },
+  "(AND meteorology.tropical_cyclone (le meteorology.tropical_cyclone.indirect_fatalities 92^^http://www.w3.org/2001/XMLSchema#integer))": {
+    "input": "(AND meteorology.tropical_cyclone (le meteorology.tropical_cyclone.indirect_fatalities 92^^http://www.w3.org/2001/XMLSchema#integer))",
+    "sub1": "(le meteorology.tropical_cyclone.indirect_fatalities 92^^http://www.w3.org/2001/XMLSchema#integer)",
+    "sub2": "(AND meteorology.tropical_cyclone sub1)",
+    "sub1-q1": "tropical cyclone indirect fatalities no more than 92",
+    "sub2-q2": "which tropical cyclone has no more than 92 indirect fatalities?",
+    "output": "which tropical cyclone has no more than 92 indirect fatalities?"
+  },
+  "(AND comic_books.comic_book_letterer (JOIN comic_books.comic_book_letterer.comic_covers_lettered Batman #429))": {
+    "input": "(AND comic_books.comic_book_letterer (JOIN comic_books.comic_book_letterer.comic_covers_lettered Batman #429))",
+    "sub1": "(JOIN comic_books.comic_book_letterer.comic_covers_lettered Batman #429)",
+    "sub2": "(AND comic_books.comic_book_letterer sub1)",
+    "sub1-q1": "comic book letterer covers lettered batman #429",
+    "sub2-q2": "who was the comic book letterer of batman #429?",
+    "output": "who was the comic book letterer of batman #429?"
+  },
+  "(AND digicams.camera_compressed_format (JOIN digicams.camera_compressed_format.cameras (AND (lt digicams.digital_camera.weight 845.0^^http://www.w3.org/2001/XMLSchema#float) (JOIN digicams.digital_camera.manufacturer Konica))))": {
+    "input": "(AND digicams.camera_compressed_format (JOIN digicams.camera_compressed_format.cameras (AND (lt digicams.digital_camera.weight 845.0^^http://www.w3.org/2001/XMLSchema#float) (JOIN digicams.digital_camera.manufacturer Konica))))",
+    "sub1": "(lt digicams.digital_camera.weight 845.0^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub2": "(JOIN digicams.digital_camera.manufacturer Konica)",
+    "sub3": "(AND sub1 sub2)",
+    "sub4": "(JOIN digicams.camera_compressed_format.cameras sub3)",
+    "sub5": "(AND digicams.camera_compressed_format sub4)",
+    "sub1-q1": "digital camera weight less than 845.0",
+    "sub2-q2": "digital camera manufacturer konica",
+    "sub3-q3": "a camera manufactured by konica, that has a weight less than 845.0",
+    "sub4-q4": "compressed format of a camera manufactured by konica, that has a weight less than 845.0",
+    "sub5-q5": "what's the compressed format of a camera manufactured by konica, that has a weight less than 845.0?",
+    "output": "what's the compressed format of a camera manufactured by konica, that has a weight less than 845.0?"
+  }
+}

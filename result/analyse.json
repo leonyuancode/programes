@@ -1,0 +1,202 @@
+{
+  "2102295009000": {
+    "sexpr": "(AND music.album_content_type (JOIN music.album_content_type.albums Korpi Ensemble))",
+    "quest": "the album korpi ensemble has what type of content?"
+  },
+  "2102447018000": {
+    "sexpr": "(AND architecture.lighthouse (JOIN architecture.lighthouse.focal_height_of_light 62.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "quest": "what lighthouses' lights are 62.0 meters high?"
+  },
+  "4300443012000": {
+    "sexpr": "(AND media_common.quotation_subject (AND (JOIN (R media_common.quotation.subjects) (JOIN media_common.quotation.spoken_by_character Angel of Remembrance)) (JOIN (R media_common.quotation.subjects) Be ready always to give an answer to every man that asketh you a reason of the hope that is in you. -- Peter 3:15)))",
+    "quest": "the subject of the quote, \"be ready always to give an answer to every man that asketh you a reason of the hope that is in you. -- peter 3:15 \" spoken by the angel of remembrance, is what?"
+  },
+  "3204027000000": {
+    "sexpr": "(AND measurement_unit.energy_unit (JOIN measurement_unit.energy_unit.measurement_system (JOIN measurement_unit.measurement_system.radioactivity_units becquerels)))",
+    "quest": "what is the unit of energy used in the same measurement system as becquerels for measure of radioactivity?"
+  },
+  "2100941002000": {
+    "sexpr": "(AND measurement_unit.energy_unit (JOIN measurement_unit.energy_unit.measurement_system Non-SI units mentioned in the SI))",
+    "quest": "non-si units mentioned in the si uses what type of unit of energy?"
+  },
+  "3205441007000": {
+    "sexpr": "(AND book.publishing_company (JOIN book.publishing_company.books_published (JOIN (R book.author.contributing_author_to) Lonnie Wheeler)))",
+    "quest": "lonnie wheeler contributed to a book edition published by what publisher?"
+  },
+  "2100814015000": {
+    "sexpr": "(AND cvg.computer_game_subject (JOIN cvg.computer_game_subject.games 720\u00b0))",
+    "quest": "720\u00b0 appears in which video games?"
+  },
+  "3201684010000": {
+    "sexpr": "(AND military.military_conflict (JOIN military.military_conflict.force_strengths (JOIN (R military.military_resource.conflicts) Personnel)))",
+    "quest": "which military conflict has force strengths with conflicts personnel?"
+  },
+  "2104634009000": {
+    "sexpr": "(COUNT (AND law.legal_subject (JOIN (R law.legal_case.subject) Office of Fair Trading v Abbey National plc)))",
+    "quest": "office of fair trading v abbey national plc has how many legal subjects?"
+  },
+  "3204636001000": {
+    "sexpr": "(AND travel.travel_destination (JOIN (R book.book_edition.place_of_publication) (JOIN (R book.audio_book_reader.audio_books_read) Mircea C\u0103rt\u0103rescu)))",
+    "quest": "what is the name of the travel destination where mircea c\u0103rt\u0103rescu is published?"
+  },
+  "3205234007000": {
+    "sexpr": "(AND conferences.conference_series (JOIN conferences.conference_series.conference (JOIN (R conferences.conference_venue.conferences) iruna)))",
+    "quest": "which conference series belongs to the same conference event as iruna?"
+  },
+  "2101990001000": {
+    "sexpr": "(AND automotive.designer (JOIN automotive.designer.automobiles_designed First Generation Mercury Topaz))",
+    "quest": "what automotive designer designed first generation mercury topaz?"
+  },
+  "2101501004000": {
+    "sexpr": "(AND sports.sport (JOIN sports.sport.leagues Colorado Cricket League))",
+    "quest": "which sport is played in colorado cricket league?"
+  },
+  "2100564012000": {
+    "sexpr": "(AND cvg.computer_videogame (JOIN cvg.computer_videogame.versions Fighting Street))",
+    "quest": "fighting street is the version of which video game?"
+  },
+  "2101089002000": {
+    "sexpr": "(AND measurement_unit.unit_of_force (JOIN measurement_unit.unit_of_force.measurement_system imperial units))",
+    "quest": "what is the unit of force using the imperial units?"
+  },
+  "2100867002000": {
+    "sexpr": "(AND radio.radio_program_episode (JOIN radio.radio_program_episode.air_date 2011-01-17^^http://www.w3.org/2001/XMLSchema#date))",
+    "quest": "what radio program made it's broadcasting debut with the first episode on jan. the 17th, 2011?"
+  },
+  "2103429003000": {
+    "sexpr": "(AND measurement_unit.current_unit (le measurement_unit.current_unit.current_in_amperes 3.479e+25^^http://www.w3.org/2001/XMLSchema#float))",
+    "quest": "which unit of electric current does not exceed 3.479e+25 current in amperes?"
+  },
+  "3205361003000": {
+    "sexpr": "(AND broadcast.radio_format (JOIN (R broadcast.radio_station.format) (JOIN broadcast.broadcast.content monte-carlo)))",
+    "quest": "what is the radio format for the station that broadcasts monte-carlo?"
+  },
+  "2102981000000": {
+    "sexpr": "(AND automotive.engine (JOIN automotive.engine.horsepower 372.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "quest": "name the engine which has a horsepower of 372.0."
+  },
+  "3203342001000": {
+    "sexpr": "(COUNT (AND fictional_universe.character_species (JOIN (R fictional_universe.fictional_universe.species) (JOIN (R fictional_universe.fictional_setting.universe) The archipelago of Meridian))))",
+    "quest": "the fictional world of the archipelago of meridian contains how many different species?"
+  },
+  "2100278003000": {
+    "sexpr": "(AND cvg.computer_videogame (JOIN cvg.computer_videogame.publisher LucasFan Games))",
+    "quest": "lucasfan games published what video game?"
+  },
+  "2102643002000": {
+    "sexpr": "(AND conferences.conference (JOIN conferences.conference.venue Astrodome))",
+    "quest": "astrodome hosted which conference?"
+  },
+  "2101294010000": {
+    "sexpr": "(AND spaceflight.rocket_engine_fuel (JOIN spaceflight.rocket_engine_fuel.rocket_engines RD-100))",
+    "quest": "which rocket engine fuel powers the rocket engines of rd-100?"
+  },
+  "2102059002000": {
+    "sexpr": "(AND measurement_unit.measurement_system (JOIN measurement_unit.measurement_system.specific_volume_units g.1236560l))",
+    "quest": "cubic metre per kilogram are the specific volume units for which measurement system?"
+  },
+  "2102574000000": {
+    "sexpr": "(AND measurement_unit.absorbed_dose_unit (JOIN measurement_unit.absorbed_dose_unit.dose_in_grays 1.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "quest": "there is a unit of absorbed units equals 1.0 dosage in grays. what is it?"
+  },
+  "2100282006000": {
+    "sexpr": "(AND broadcast.radio_station (JOIN broadcast.radio_station.format Urban contemporary gospel))",
+    "quest": "urban contemporary gospel is available to listen on which radio station?"
+  },
+  "2102295015000": {
+    "sexpr": "(AND music.album_content_type (JOIN music.album_content_type.albums A Carrot Is As Close As a Rabbit Gets To a Diamond))",
+    "quest": "which is the content type of album a carrot is as close as a rabbit gets to a diamond?"
+  },
+  "2102458004000": {
+    "sexpr": "(AND measurement_unit.angular_acceleration_unit (JOIN measurement_unit.angular_acceleration_unit.measurement_system International System of Units))",
+    "quest": "the unit of angular acceleration in measurement system international system of units is called what?"
+  },
+  "2102568000000": {
+    "sexpr": "(AND measurement_unit.distance_unit (JOIN measurement_unit.distance_unit.measurement_system Japanese units of measurement))",
+    "quest": "how does japanese units of measurement measure length?"
+  },
+  "2102411006000": {
+    "sexpr": "(AND law.constitutional_amendment (JOIN law.constitutional_amendment.proposed_on 1789-09-25^^http://www.w3.org/2001/XMLSchema#date))",
+    "quest": "what amendment to the constitution was proposed on 1789-09-25?"
+  },
+  "2100249009000": {
+    "sexpr": "(AND business.company_advisor (JOIN business.company_advisor.companies_advised Apptera))",
+    "quest": "apptera was advised by which organization advisor?"
+  },
+  "3204629011000": {
+    "sexpr": "(AND physics.particle (JOIN physics.particle.family (JOIN physics.particle_family.particles Charm antiquark)))",
+    "quest": "what subatomic particle is in the same family as the charm antiquark?"
+  },
+  "2101215001000": {
+    "sexpr": "(AND measurement_unit.measurement_system (JOIN measurement_unit.measurement_system.volumetric_flow_rate_units cubic meters per second))",
+    "quest": "the measurement cubic meters per second is used in which volumetric system?"
+  },
+  "2103095010000": {
+    "sexpr": "(COUNT (AND geography.mountain_type (JOIN (R geography.mountain.mountain_type) Mount Slamet)))",
+    "quest": "mount slamet has how many different types?"
+  },
+  "2100194002000": {
+    "sexpr": "(AND measurement_unit.heat_capacity_unit (JOIN measurement_unit.heat_capacity_unit.capacity_in_joules_per_kelvin 1.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "quest": "what unit of heat capacity equals to 1.0 joules per kelvin?"
+  },
+  "3200253000000": {
+    "sexpr": "(AND media_common.adaptation (JOIN media_common.adaptation.adapted_from (JOIN media_common.adapted_work.adaptations Sukiyaki Western Django)))",
+    "quest": "what adaptation is adapted from an adapted work which is an adaptation of sukiyaki western django?"
+  },
+  "2100168002000": {
+    "sexpr": "(AND measurement_unit.speed_unit (JOIN measurement_unit.speed_unit.measurement_system us customary unit))",
+    "quest": "what is the unit of speed in us customary unit?"
+  },
+  "2100504014000": {
+    "sexpr": "(AND radio.radio_program_episode (JOIN radio.radio_program_episode.program New England Almanac: Portraits in Sound of New England Life and Landscape))",
+    "quest": "new england almanac: portraits in sound of new england life and landscape is an episode from which radio program?"
+  },
+  "2102114003000": {
+    "sexpr": "(AND measurement_unit.electric_flux_density_unit (JOIN measurement_unit.electric_flux_density_unit.density_in_coulombs_per_square_meter 1.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "quest": "what is another unit of measurement that equals 1.0 coulombs per square meter?"
+  },
+  "2103890005000": {
+    "sexpr": "(ARGMIN music.music_video music.music_video.initial_release_date)",
+    "quest": "what was the first music video released?"
+  },
+  "2102619000000": {
+    "sexpr": "(AND measurement_unit.solid_angle_unit (JOIN measurement_unit.solid_angle_unit.measurement_system Non-SI units mentioned in the SI))",
+    "quest": "name the unit of solid angle in the measurement system non-si units mentioned in the si."
+  },
+  "2102344013000": {
+    "sexpr": "(AND food.type_of_dish (JOIN food.type_of_dish.dishes Gumbo))",
+    "quest": "what kind of meal is gumbo?"
+  },
+  "2100691000000": {
+    "sexpr": "(AND fictional_universe.fictional_character (JOIN fictional_universe.fictional_character.species Virizion))",
+    "quest": "what fictional character's species is virizion?"
+  },
+  "2102945002000": {
+    "sexpr": "(AND measurement_unit.dose_equivalence_unit (JOIN measurement_unit.dose_equivalence_unit.measurement_system International System of Units))",
+    "quest": "international system of units has the equivalence of what unit dose?"
+  },
+  "2105011002000": {
+    "sexpr": "(COUNT (AND interests.collectable_item (JOIN (R interests.collection_category.items_in_this_category) larp bows)))",
+    "quest": "how many collectable items are there in larp bows?"
+  },
+  "2102680001000": {
+    "sexpr": "(AND measurement_unit.amount_concentration_unit (JOIN measurement_unit.amount_concentration_unit.measurement_system International System of Units))",
+    "quest": "the international system of units measured by what unit of amount concentration?"
+  },
+  "2100371000000": {
+    "sexpr": "(AND measurement_unit.unit_of_resistivity (JOIN measurement_unit.unit_of_resistivity.measurement_system International System of Units))",
+    "quest": "which unit of resistivity can be found under the international system of units measurement system?"
+  },
+  "2103629004000": {
+    "sexpr": "(ARGMAX cvg.game_version cvg.game_version.release_date)",
+    "quest": "which video game version has the latest release date?"
+  },
+  "2102277007000": {
+    "sexpr": "(AND fictional_universe.character_species (JOIN fictional_universe.character_species.found_in_fictional_universe Warhammer 40,000))",
+    "quest": "warhammer 40,000 is what type of fictional species?"
+  },
+  "2100442000000": {
+    "sexpr": "(AND measurement_unit.heat_capacity_unit (JOIN measurement_unit.heat_capacity_unit.measurement_system International System of Units))",
+    "quest": "which unit measures heat capacity in the international system of units measurement system?"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "(ARGMIN book.book_character fictional_universe.fictional_character.weight)": {
+    "input": "(ARGMIN book.book_character fictional_universe.fictional_character.weight)",
+    "sub1": "(ARGMIN book.book_character fictional_universe.fictional_character.weight)",
+    "sub1-q1": "what book character weighs the least?",
+    "output": "what book character weighs the least?"
+  },
+  "(ARGMAX protected_sites.governing_body_of_protected_sites organization.organization.date_founded)": {
+    "input": "(ARGMAX protected_sites.governing_body_of_protected_sites organization.organization.date_founded)",
+    "sub1": "(ARGMAX protected_sites.governing_body_of_protected_sites organization.organization.date_founded)",
+    "sub1-q1": "what governing body of protected sites is most recent?",
+    "output": "what governing body of protected sites is most recent?"
+  },
+  "(AND biology.organism (lt biology.organism.height_meters 1.68^^http://www.w3.org/2001/XMLSchema#float))": {
+    "input": "(AND biology.organism (lt biology.organism.height_meters 1.68^^http://www.w3.org/2001/XMLSchema#float))",
+    "sub1": "(lt biology.organism.height_meters 1.68^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub2": "(AND biology.organism sub1)",
+    "sub1-q1": "organism height meter less than 1.68",
+    "sub2-q2": "which organism has a height smaller than 1.68?",
+    "output": "which organism has a height smaller than 1.68?"
+  },
+  "(COUNT (AND education.academic (JOIN education.academic.advisors Persi Diaconis)))": {
+    "input": "(COUNT (AND education.academic (JOIN education.academic.advisors Persi Diaconis)))",
+    "sub1": "(JOIN education.academic.advisors Persi Diaconis)",
+    "sub2": "(AND education.academic sub1)",
+    "sub3": "(COUNT sub2)",
+    "sub1-q1": "academic advisors persi diaconis",
+    "sub2-q2": "academic of academic advisors persi diaconis",
+    "sub3-q3": "persi diaconis had what number of academic advisors?",
+    "output": "persi diaconis had what number of academic advisors?"
+  },
+  "(AND tv.tv_network (JOIN tv.tv_network.channels (lt broadcast.tv_channel.from 2007-04-25^^http://www.w3.org/2001/XMLSchema#date)))": {
+    "input": "(AND tv.tv_network (JOIN tv.tv_network.channels (lt broadcast.tv_channel.from 2007-04-25^^http://www.w3.org/2001/XMLSchema#date)))",
+    "sub1": "(lt broadcast.tv_channel.from 2007-04-25^^http://www.w3.org/2001/XMLSchema#date)",
+    "sub2": "(JOIN tv.tv_network.channels sub1)",
+    "sub3": "(AND tv.tv_network sub2)",
+    "sub1-q1": "tv channel before 04/25/2007",
+    "sub2-q2": "the tv network channel of tv channel before 04/25/2007",
+    "sub3-q3": "the channel which started before 04/25/2007 is on which network?",
+    "output": "the channel which started before 04/25/2007 is on which network?"
+  },
+  "(AND spaceflight.rocket_engine (JOIN spaceflight.rocket_engine.used_in_rocket_stages (le spaceflight.rocket_stage.burn_time 150.0^^http://www.w3.org/2001/XMLSchema#float)))": {
+    "input": "(AND spaceflight.rocket_engine (JOIN spaceflight.rocket_engine.used_in_rocket_stages (le spaceflight.rocket_stage.burn_time 150.0^^http://www.w3.org/2001/XMLSchema#float)))",
+    "sub1": "(le spaceflight.rocket_stage.burn_time 150.0^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub2": "(JOIN spaceflight.rocket_engine.used_in_rocket_stages sub1)",
+    "sub3": "(AND spaceflight.rocket_engine sub2)",
+    "sub1-q1": "rocket stage burn time no more than 150.0",
+    "sub2-q2": "rocket engine use rocket stage burn time no more than 150.0 ",
+    "sub3-q3": "which rocket engine has a rocket stage burn time no more than 150.0?",
+    "output": "which rocket engine has a rocket stage burn time no more than 150.0?"
+  },
+  "(AND government.polling_authority (JOIN government.polling_authority.polls (ge government.election_poll.release_date 2012-08-18^^http://www.w3.org/2001/XMLSchema#date)))": {
+    "input": "(AND government.polling_authority (JOIN government.polling_authority.polls (ge government.election_poll.release_date 2012-08-18^^http",
+    "sub1": "(ge government.election_poll.release_date 2012-08-18^^http://www.w3.org/2001/XMLSchema#date)))",
+    "sub2": "(JOIN government.polling_authority.polls sub1)",
+    "sub3": "(AND government.polling_authority sub2)",
+    "sub1-q1": "election poll released date no earlier than aug. the 18th, 2012",
+    "sub2-q2": "polling authority election polls released date no earlier than aug. the 18th, 2012",
+    "sub3-q3": "which is the polling authority for election polls released no earlier than aug. the 18th, 2012?",
+    "output": "which is the polling authority for election polls released no earlier than aug. the 18th, 2012?"
+  },
+  "(AND tv.tv_song_performer (JOIN tv.tv_song_performer.episode_segments (JOIN tv.tv_segment_song_relationship.song (JOIN music.composition.composer walker))))": {
+    "input": "(AND tv.tv_song_performer (JOIN tv.tv_song_performer.episode_segments (JOIN tv.tv_segment_song_relationship.song (JOIN music.composition.composer walker))))",
+    "sub1": "(JOIN music.composition.composer walker)",
+    "sub2": "(JOIN tv.tv_segment_song_relationship.song sub1)",
+    "sub3": "(JOIN tv.tv_song_performer.episode_segments sub2)",
+    "sub4": "(AND tv.tv_song_performer sub3)",
+    "sub1-q1": "composition composer walker",
+    "sub2-q2": "tv segment song relationship composition composer walker",
+    "sub3-q3": "episode segments tv song performer composer walker",
+    "sub4-q4": "what is the name of the singer that performed the tv song composed by walker?",
+    "output": "what is the name of the singer that performed the tv song composed by walker?"
+  }
+}

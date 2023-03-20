@@ -1,0 +1,68 @@
+{
+  "(AND religion.place_of_worship (JOIN religion.place_of_worship.religion ismailism))": {
+    "input": "(AND religion.place_of_worship (JOIN religion.place_of_worship.religion ismailism))",
+    "sub1": "(JOIN religion.place_of_worship.religion ismailism)",
+    "sub2": "(AND religion.place_of_worship (JOIN religion.place_of_worship.religion ismailism))",
+    "sub1-q1": "the place of worship in the ismailism religion",
+    "sub2-q2": "what is the name of the place of worship in the ismailism religion?",
+    "output": "what is the name of the place of worship in the ismailism religion?"
+  },
+  "(AND comic_books.comic_book_series (JOIN (R comic_books.comic_book_genre.comic_book_series_in_this_genre) (JOIN (R comic_books.comic_book_story.genre) Case of the Namesake Murders)))": {
+    "input": "(AND comic_books.comic_book_series (JOIN (R comic_books.comic_book_genre.comic_book_series_in_this_genre) (JOIN (R comic_books.comic_book_story.genre) Case of the Namesake Murders)))",
+    "sub1": "(JOIN (R comic_books.comic_book_story.genre) Case of the Namesake Murders)",
+    "sub2": "(JOIN (R comic_books.comic_book_genre.comic_book_series_in_this_genre) (JOIN (R comic_books.comic_book_story.genre) Case of the Namesake Murders))",
+    "sub3": "(AND comic_books.comic_book_series (JOIN (R comic_books.comic_book_genre.comic_book_series_in_this_genre) (JOIN (R comic_books.comic_book_story.genre) Case of the Namesake Murders)))",
+    "sub1-q1": "genre of comic book case of the namesake murders",
+    "sub2-q2": "same genre with comic book case of the namesake murders",
+    "sub3-q3": "case of the namesake murders is the same genre as what comic book series?",
+    "output": "case of the namesake murders is the same genre as what comic book series?"
+  },
+  "(ARGMIN food.bottled_water food.bottled_water.nitrate_content)": {
+    "input": "(ARGMIN food.bottled_water food.bottled_water.nitrate_content)",
+    "sub1": "(ARGMIN food.bottled_water food.bottled_water.nitrate_content)",
+    "sub1-q1": "the bottled water that has the least amount of nitrates?",
+    "output": "the bottled water that has the least amount of nitrates?"
+  },
+  "(ARGMAX physics.particle physics.particle.spin)": {
+    "input": "(ARGMAX physics.particle physics.particle.spin)",
+    "sub1": "(ARGMAX physics.particle physics.particle.spin)",
+    "sub1-q1": "what is the subatomic particle with the fastest spin?",
+    "output": "what is the subatomic particle with the fastest spin?"
+  },
+  "(COUNT (AND aviation.aircraft_manufacturer (JOIN organization.organization.legal_structure S.A.)))": {
+    "input": "(COUNT (AND aviation.aircraft_manufacturer (JOIN organization.organization.legal_structure S.A.)))",
+    "sub1": "(JOIN organization.organization.legal_structure S.A.)",
+    "sub2": "(AND aviation.aircraft_manufacturer (JOIN organization.organization.legal_structure S.A.))",
+    "sub3": "(COUNT (AND aviation.aircraft_manufacturer (JOIN organization.organization.legal_structure S.A.)))",
+    "sub1-q1": "legal structure of s.a.",
+    "sub2-q2": "aircraft manufacturer in the legal structure of s.a.",
+    "sub3-q3": "what is the number of aircraft manufacturer in the legal structure of s.a.?",
+    "output": "what is the number of aircraft manufacturer in the legal structure of s.a.?"
+  },
+  "(AND user.patrick.default_domain.warship_v1_1 (JOIN user.patrick.default_domain.warship_v1_1.struck 1970-07-01^^http://www.w3.org/2001/XMLSchema#date))": {
+    "input": "(AND user.patrick.default_domain.warship_v1_1 (JOIN user.patrick.default_domain.warship_v1_1.struck 1970-07-01^^http://www.w3.org/2001/XMLSchema#date))",
+    "sub1": "(JOIN user.patrick.default_domain.warship_v1_1.struck 1970-07-01^^http://www.w3.org/2001/XMLSchema#date)",
+    "sub2": "(AND user.patrick.default_domain.warship_v1_1 (JOIN user.patrick.default_domain.warship_v1_1.struck 1970-07-01^^http://www.w3.org/2001/XMLSchema#date))",
+    "sub1-q1": "on 07/01/1970,warship v1.1 hit",
+    "sub2-q2": "on 07/01/1970, which warship v1.1 was hit?",
+    "output": "on 07/01/1970, which warship v1.1 was hit?"
+  },
+  "(AND business.shopping_center (JOIN business.shopping_center.retail_floor_space_m_2 72000^^http://www.w3.org/2001/XMLSchema#integer))": {
+    "input": "(AND business.shopping_center (JOIN business.shopping_center.retail_floor_space_m_2 72000^^http://www.w3.org/2001/XMLSchema#integer))",
+    "sub1": "(JOIN business.shopping_center.retail_floor_space_m_2 72000^^http://www.w3.org/2001/XMLSchema#integer)",
+    "sub2": "(AND business.shopping_center (JOIN business.shopping_center.retail_floor_space_m_2 72000^^http://www.w3.org/2001/XMLSchema#integer))",
+    "sub1-q1": "shopping center has floor space as large as 72000?",
+    "sub2-q2": "what is the name of a shopping center that has space as large as 72000?",
+    "output": "what is the name of a shopping center that has space as large as 72000?"
+  },
+  "(AND music.genre (JOIN (R music.genre.parent_genre) (JOIN music.genre.albums confessions tour)))": {
+    "input": "(AND music.genre (JOIN (R music.genre.parent_genre) (JOIN music.genre.albums confessions tour)))",
+    "sub1": "(JOIN music.genre.albums confessions tour)",
+    "sub2": "(JOIN (R music.genre.parent_genre) (JOIN music.genre.albums confessions tour))",
+    "sub3": "(AND music.genre (JOIN (R music.genre.parent_genre) (JOIN music.genre.albums confessions tour)))",
+    "sub1-q1": "the music genre albums confessions tour",
+    "sub2-q2": "the albums confessions tour is part of what parent genre",
+    "sub3-q3": "the albums confessions tour is part of what parent genre of a musical genre?",
+    "output": "the albums confessions tour is part of what parent genre of a musical genre?"
+  }
+}

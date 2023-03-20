@@ -1,0 +1,66 @@
+{
+  "(AND finance.currency (JOIN (R book.newspaper_price.currency) (JOIN (R book.newspaper.price) Featherduster)))": {
+    "input": "(AND finance.currency (JOIN (R book.newspaper_price.currency) (JOIN (R book.newspaper.price) Featherduster)))",
+    "sub1": "(JOIN (R book.newspaper.price) Featherduster)",
+    "sub2": "(JOIN (R book.newspaper_price.currency) sub1)",
+    "sub3": "(AND finance.currency sub2)",
+    "sub1-q1": "newspaper price featherduster",
+    "sub2-q2": "newspaper price currency featherduster",
+    "sub3-q3": "featherduster is priced in which currency?",
+    "output": "featherduster is priced in which currency?"
+  },
+  "(ARGMAX meteorology.tropical_cyclone_season meteorology.tropical_cyclone_season.major_storms)": {
+    "input": "(ARGMAX meteorology.tropical_cyclone_season meteorology.tropical_cyclone_season.major_storms)",
+    "sub1": "(ARGMAX meteorology.tropical_cyclone_season meteorology.tropical_cyclone_season.major_storms)",
+    "sub1-q1": "what is the tropical cyclone season with maximum major storms?",
+    "output": "what is the tropical cyclone season with maximum major storms?"
+  },
+  "(AND geography.island (JOIN geography.island.max_length 730.0^^http://www.w3.org/2001/XMLSchema#float))": {
+    "input": "(AND geography.island (JOIN geography.island.max_length 730.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "sub1": "(JOIN geography.island.max_length 730.0^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub2": "(AND geography.island sub1)",
+    "sub1-q1": "island max length 730.0",
+    "sub2-q2": "730.0 is the maximum length of what island?",
+    "output": "730.0 is the maximum length of what island?"
+  },
+  "(AND astronomy.asteroid (JOIN astronomy.asteroid.member_of_asteroid_group Earth trojan))": {
+    "input": "(AND astronomy.asteroid (JOIN astronomy.asteroid.member_of_asteroid_group Earth trojan))",
+    "sub1": "(JOIN astronomy.asteroid.member_of_asteroid_group Earth trojan)",
+    "sub2": "(AND astronomy.asteroid sub1)",
+    "sub1-q1": "member of asteroid group earth trojan",
+    "sub2-q2": "earth trojan has which asteroid in it?",
+    "output": "earth trojan has which asteroid in it?"
+  },
+  "(AND computer.computer_peripheral (JOIN computer.computer_peripheral.peripheral_class Light gun))": {
+    "input": "(AND computer.computer_peripheral (JOIN computer.computer_peripheral.peripheral_class Light gun))",
+    "sub1": "(JOIN computer.computer_peripheral.peripheral_class Light gun)",
+    "sub2": "(AND computer.computer_peripheral sub1)",
+    "sub1-q1": "computer peripheral class light gun",
+    "sub2-q2": "the light gun class is used for which computer peripheral",
+    "output": "the light gun class is used for which computer peripheral"
+  },
+  "(AND food.beer_style (JOIN food.beer_style.bjcp_style_category Belgian Strong Ale))": {
+    "input": "(AND food.beer_style (JOIN food.beer_style.bjcp_style_category Belgian Strong Ale))",
+    "sub1": "(JOIN food.beer_style.bjcp_style_category Belgian Strong Ale)",
+    "sub2": "(AND food.beer_style sub1)",
+    "sub1-q1": "beer style bjcp style category belgian strong ale",
+    "sub2-q2": "belgian strong ale encompasses what beer styles?",
+    "output": "belgian strong ale encompasses what beer styles?"
+  },
+  "(AND law.international_patent_category (JOIN law.international_patent_category.patents Systems and method for resolving ambiguity))": {
+    "input": "(AND law.international_patent_category (JOIN law.international_patent_category.patents Systems and method for resolving ambiguity))",
+    "sub1": "(JOIN law.international_patent_category.patents Systems and method for resolving ambiguity)",
+    "sub2": "(AND law.international_patent_category sub1)",
+    "sub1-q1": "international patent category systems and method for resolving ambiguity",
+    "sub2-q2": "systems and method for resolving ambiguity should be listed in what category?",
+    "output": "systems and method for resolving ambiguity should be listed in what category?"
+  },
+  "(AND exhibitions.exhibition (JOIN exhibitions.exhibition.produced_by Exhibitgroup/Giltspur))": {
+    "input": "(AND exhibitions.exhibition (JOIN exhibitions.exhibition.produced_by Exhibitgroup/Giltspur))",
+    "sub1": "(JOIN exhibitions.exhibition.produced_by Exhibitgroup/Giltspur)",
+    "sub2": "(AND exhibitions.exhibition sub1)",
+    "sub1-q1": "exhibition produced by exhibitgroup/giltspur",
+    "sub2-q2": "what are the exhibitions which were produced by exhibitgroup/giltspur?",
+    "output": "what are the exhibitions which were produced by exhibitgroup/giltspur?"
+  }
+}

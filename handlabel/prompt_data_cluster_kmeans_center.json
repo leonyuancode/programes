@@ -1,0 +1,105 @@
+{
+  "(AND film.film_set_designer (lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))": {
+    "input": "(AND film.film_set_designer (lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "sub1": "(lt people.person.weight_kg 75.0^^http://www.w3.org/2001/XMLSchema#float))",
+    "sub2": "(AND film.film_set_designer sub1)",
+    "sub1-q1": "person weight kg less than 75.0",
+    "sub2-q2": "who is a film set designer and weight less than 75.0?",
+    "output": "who is a film set designer and weight less than 75.0?"
+  },
+  "(ARGMAX (AND meteorology.cloud (JOIN (R meteorology.cloud.cloud_family) (JOIN meteorology.cloud.classification Family B (mid-level)))) meteorology.cloud.minimum_altitude)": {
+    "input": "(ARGMAX (AND meteorology.cloud (JOIN (R meteorology.cloud.cloud_family) (JOIN meteorology.cloud.classification Family B (mid-level)))) meteorology.cloud.minimum_altitude)",
+    "sub1": "(JOIN meteorology.cloud.classification Family B (mid-level))",
+    "sub2": "(JOIN (R meteorology.cloud.cloud_family) sub1)",
+    "sub3": "(AND meteorology.cloud sub2)",
+    "sub4": "(ARGMAX sub3 meteorology.cloud.minimum_altitude)",
+    "sub1-q1": "cloud classification of the family b (mid-level)",
+    "sub2-q2": "cloud classification of the family b (mid-level) cloud family",
+    "sub3-q3": "cloud that cloud classification is the family b (mid-level) cloud family",
+    "sub4-q4": "which cloud, of the family b (mid-level) cloud family, has the highest altitude?",
+    "output": "which cloud, of the family b (mid-level) cloud family, has the highest altitude?"
+  },
+  "(ARGMIN (AND book.short_story (JOIN (R book.literary_series.works_in_this_series) (JOIN book.literary_series.author_s robert lynn asprin))) book.written_work.date_written)": {
+    "input": "(ARGMIN (AND book.short_story (JOIN (R book.literary_series.works_in_this_series) (JOIN book.literary_series.author_s robert lynn asprin))) book.written_work.date_written)",
+    "sub1": "(JOIN book.literary_series.author_s robert lynn asprin)",
+    "sub2": "(JOIN (R book.literary_series.works_in_this_series) sub1)",
+    "sub3": "(AND book.short_story sub2)",
+    "sub4": "(ARGMIN sub3 book.written_work.date_written)",
+    "sub1-q1": "literary series author robert lynn asprin",
+    "sub2-q2": "literary series works author robert lynn asprin",
+    "sub3-q3": "short story literary series works author is robert lynn asprin",
+    "sub4-q4": "which is the earliest short story written by robert lynn asprin?",
+    "output": "which is the earliest short story written by robert lynn asprin?"
+  },
+   "(AND food.recipe (AND (JOIN (R food.recipe_ingredient.recipe) (JOIN food.recipe_ingredient.quantity 0.5^^http://www.w3.org/2001/XMLSchema#float)) (le food.recipe.preparation_time 45.0^^http://www.w3.org/2001/XMLSchema#float)))": {
+    "input": "(AND food.recipe (AND (JOIN (R food.recipe_ingredient.recipe) (JOIN food.recipe_ingredient.quantity 0.5^^http://www.w3.org/2001/XMLSchema#float)) (le food.recipe.preparation_time 45.0^^http://www.w3.org/2001/XMLSchema#float)))",
+    "sub1": "(JOIN food.recipe_ingredient.quantity 0.5^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub2": "(JOIN (R food.recipe_ingredient.recipe) sub1)",
+    "sub3": "(le food.recipe.preparation_time 45.0^^http://www.w3.org/2001/XMLSchema#float)",
+    "sub4": "(AND sub2 sub3)",
+    "sub5": "(AND food.recipe sub4)",
+    "sub1-q1": "recipe ingredient quantity 0.5",
+    "sub2-q2": "recipe that ingredient quantity is 0.5",
+    "sub3-q3": "recipe preparation time no more than 45.0",
+    "sub4-q4": "recipe that ingredient quantity 0.5 and preparation time no more than 45.0",
+    "sub5-q5": "what is the name of the recipe that uses 0.5 of the ingredient and preparation time no more than 45.0 to make?",
+    "output": "what is the name of the recipe that uses 0.5 of the ingredient and preparation time no more than 45.0 to make?"
+  },
+  "(AND internet.website (AND (JOIN (R internet.website_category.sites) (JOIN (R internet.website.category) Jovem Nerd)) (JOIN internet.website.api really simple syndication)))": {
+    "input": "(AND internet.website (AND (JOIN (R internet.website_category.sites) (JOIN (R internet.website.category) Jovem Nerd)) (JOIN internet.website.api really simple syndication)))",
+    "sub1": "(JOIN (R internet.website.category) Jovem Nerd)",
+    "sub2": "(JOIN (R internet.website_category.sites) sub1)",
+    "sub3": "(JOIN internet.website.api really simple syndication)",
+    "sub4": "(AND sub2 sub3)",
+    "sub5": "(AND internet.website sub4)",
+    "sub1-q1": "the website category of jovem nerd",
+    "sub2-q2": "the sites that website category same to jovem nerd",
+    "sub3-q3": "website api of really simple syndication",
+    "sub4-q4": "the sites that website category same to jovem nerd has website api of really simple syndication",
+    "sub5-q5": "which website that belongs to the category of jovem nerd has website api of really simple syndication?",
+    "output": "which website that belongs to the category of jovem nerd has website api of really simple syndication?"
+  },
+  "(COUNT (AND sports.defunct_sports_team (JOIN sports.defunct_sports_team.sport (JOIN (R sports.sports_team.sport) (JOIN (R soccer.football_league_season.teams) 1996\\u201397 Ekstraklasa)))))": {
+    "input": "(COUNT (AND sports.defunct_sports_team (JOIN sports.defunct_sports_team.sport (JOIN (R sports.sports_team.sport) (JOIN (R soccer.football_league_season.teams) 1996\\u201397 Ekstraklasa)))))",
+    "sub1": "(JOIN (R soccer.football_league_season.teams) 1996\\u201397 Ekstraklasa)",
+    "sub2": "(JOIN (R sports.sports_team.sport) sub1)",
+    "sub3": "(JOIN sports.defunct_sports_team.sport sub2)",
+    "sub4": "(AND sports.defunct_sports_team sub3)",
+    "sub5": "(COUNT sub4)",
+    "sub1-q1": "the football league season teams in the 1996\\u201397 ekstraklasa",
+    "sub2-q2": "sport of the football league season teams in the 1996\\u201397 ekstraklasa",
+    "sub3-q3": "defunct sports team sport as teams in the 1996–97 ekstraklasa",
+    "sub4-q4": "defunct sports teams that play the same sport as the football league season teams in the 1996\\u201397 ekstraklasa",
+    "sub5-q5": "what is the number of defunct teams that play the same sport as the football league season teams in the 1996\\u201397 ekstraklasa?",
+    "output": "what is the number of defunct teams that play the same sport as the football league season teams in the 1996\\u201397 ekstraklasa?"
+  },
+
+  "(AND biology.genomic_locus (AND (ge biology.genomic_locus.end_base 55170887^^http://www.w3.org/2001/XMLSchema#integer) (JOIN biology.genomic_locus.band (JOIN (R biology.chromosome.band) Chromosome 19 (human)))))": {
+    "input": "(AND biology.genomic_locus (AND (ge biology.genomic_locus.end_base 55170887^^http://www.w3.org/2001/XMLSchema#integer) (JOIN biology.genomic_locus.band (JOIN (R biology.chromosome.band) Chromosome 19 (human)))))",
+    "sub1": "(ge biology.genomic_locus.end_base 55170887^^http://www.w3.org/2001/XMLSchema#integer)",
+    "sub2": "(JOIN (R biology.chromosome.band) Chromosome 19 (human))",
+    "sub3": "(JOIN biology.genomic_locus.band sub2)",
+    "sub4": "(AND sub1 sub3)",
+    "sub5": "(AND biology.genomic_locus sub4)",
+    "sub1-q1": "genomic locus with end base over 55170887",
+    "sub2-q2": "chromosome band of chromosome 19 (human)",
+    "sub3-q3": "genomic locus band of chromosome 19 (human)",
+    "sub4-q4": "genomic locus with end base over 55170887 has the same band as chromosome 19 (human)",
+    "sub5-q5": "which genomic locus with end base over 55170887 has the same band as chromosome 19 (human)?",
+    "output": "which genomic locus with end base over 55170887 has the same band as chromosome 19 (human)?"
+  },
+  "(AND aviation.airliner_accident (AND (JOIN aviation.airliner_accident.aircraft (gt aviation.aviation_incident_aircraft_relationship.passengers 112^^http://www.w3.org/2001/XMLSchema#integer)) (JOIN (R aviation.aircraft_model.accidents) 737 classic)))": {
+    "input": "(AND aviation.airliner_accident (AND (JOIN aviation.airliner_accident.aircraft (gt aviation.aviation_incident_aircraft_relationship.passengers 112^^http://www.w3.org/2001/XMLSchema#integer)) (JOIN (R aviation.aircraft_model.accidents) 737 classic)))",
+    "sub1": "(gt aviation.aviation_incident_aircraft_relationship.passengers 112^^http://www.w3.org/2001/XMLSchema#integer)",
+    "sub2": "(JOIN aviation.airliner_accident.aircraft sub1)",
+    "sub3": "(JOIN (R aviation.aircraft_model.accidents) 737 classic)",
+    "sub4": "(AND sub2 sub3)",
+    "sub5": "(AND aviation.airliner_accident sub4)",
+    "sub1-q1": "aviation incident aircraft relationship passengers more than 112",
+    "sub2-q2": "airliner accident passengers more than 112",
+    "sub3-q3": "aircraft model accident 737 classic",
+    "sub4-q4": "aircraft accidents 737 classic that airliner accident passengers more than 112 ",
+    "sub5-q5": "which aviation accidents of aircraft 737 classic has involved more than 112 passengers?",
+    "output": "which aviation accidents of aircraft 737 classic has involved more than 112 passengers?"
+  }
+}
